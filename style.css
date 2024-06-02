@@ -47,12 +47,14 @@ input[type='color']::-webkit-color-swatch{
 .theme-picker{
   width: 25px;
   height: 25px;
+  line-height: 25px;
   position: fixed;
   bottom: 50px;
   right: 40px;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .blue-span{
   color: var(--primary-theme-color);
 }
@@ -109,6 +111,7 @@ header button:hover{
 }
 .logo-text{
   letter-spacing: 2px;
+  font-size: 30px;
 }
 .header-links{
   display: flex;
@@ -140,6 +143,8 @@ header button:hover{
   display: flex;
   justify-content: space-between;
   width: 80px;
+  font-size: 30px;
+  gap: 15px;
 }
 .social-icon a i.fa-linkedin:hover{
   color: #0072b1;
