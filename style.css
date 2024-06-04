@@ -28,7 +28,13 @@ html{
   padding: 8px;
   border-radius: 10px;
   font-weight: 700;
+  font-size: 15px;
   margin-top: 10px;
+  display: inline-block;
+  justify-content: space-between;
+}
+.btn2{
+  margin-right: 5px;
 }
 .btn:hover{
   box-shadow: 2px 2px 10px var(--primary-theme-color);
@@ -112,6 +118,7 @@ header button:hover{
 .logo-text{
   letter-spacing: 2px;
   font-size: 30px;
+  font-style: italic;
 }
 .header-links{
   display: flex;
@@ -143,57 +150,55 @@ header button:hover{
   display: flex;
   justify-content: space-between;
   width: 80px;
-  font-size: 30px;
+  font-size: 35px;
   gap: 15px;
+  transition: transform 0.5s;
 }
 .social-icon a i.fa-linkedin:hover{
   color: #0072b1;
+  transform: translateY(-5px);
 }
 .social-icon a i.fa-github:hover{
   color: #4078c0;
+  transform: translateY(-5px);
 }
 .social-icon a i.fa-facebook:hover{
   color: #0072b1;
+  transform: translateY(-5px);
 }
 /* about section */
 .about-section{
   background-color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 40px 80px;
+  color: var(--primary-white);
 }
-.img-div{
+.about-section h1{
+  color: var(--primary-white);
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.about-area{
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.img-div img{
   height: 300px;
   width: 300px;
-}
-.about-section img{
   border-radius: 50%;
   background-color: var(--primary-light-color);
   border: 2px solid var(--primary-theme-color);
   box-shadow: 2px 2px 3px var(--primary-theme-color);
 }
-.about-section ol{
-  list-style: none;
-  color: var(--primary-white);
-  margin-left: 90px;
-}
-.about-section ol li h1{
-  color: var(--primary-white);
+
+.about-dis h2{
   margin-bottom: 10px;
   font-size: 50px;
 }
-.about-section li a{
-  color: var(--primary-grey);
-}
-.about-section li a:hover{
-  color: var(--primary-theme-color);
-}
-.about-section li strong{
-  color: var(--primary-white);
-}
-/* service section */
-.service-section{
+/* service section  */
+.skill-section{
   background-color: var(--primary-light-color);
   color: var(--primary-white);
   display: flexd;
@@ -201,8 +206,10 @@ header button:hover{
   align-items: center;
   padding: 100px 30px;
 }
-.service-section h1{
+.skill-section h1{
   text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 .service-cards-container{
   display: flex;
@@ -234,23 +241,114 @@ header button:hover{
   border-radius: 50%;
   margin: 5px;
 }
-/* contact section */
-.contact-section{
-  background-color: var(--primary-light-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+/*  portfolio section */
+
+.portfolio-section{
+  background-color: var(--primary-light-color); 
   padding: 60px 80px;
+  color: var(--primary-white);
+}
+.portfolio-section h1{
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+  justify-content: space-around;
+  /* background-color: var(--primary-color-hover); */
+}
+.tab-link{
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  
+}
+.tab-link::after{
+  content: "";
+  width: 0;
+  height: 4px;
+  background: var(--primary-theme-color);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-link.active-link::after{
+  width: 100%;
+}
+.tab-contant ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contant ul li span{
+  color: var(--primary-grey);
+  font-size: 14px;
+}
+.tab-contant{
+  display: none;
+}
+.tab-contant.active-tab{
+  display: block;
+
+}
+
+/* contact section */
+
+.contact-section{
+  background-color: var(--primary-color);  
+  padding: 60px 80px;
+}
+.contact-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-area h3{
+  color: var(--primary-grey);
+  margin-bottom: 20px;
+}
+.contact-area ol{
+  list-style: none;
+  color: var(--primary-white);
+  font-size: 20px;
+}
+.contact-area ol li{
+  margin-bottom: 20px;
+}
+.contact-area ol li i{
+  font-size: 30px;
+  color: var(--primary-grey);
+  margin-right: 8px;
+}
+.contact-area ol li i:hover{
+  color: var(--primary-theme-color);
+}
+.contact-area li a{
+  color: var(--primary-grey);
+}
+.contact-area li a:hover{
+  color: var(--primary-theme-color);
+}
+.contact-area li strong{
+  color: var(--primary-white);
 }
 .contact-section h1{
   color: var(--primary-white);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 .contact-section form{
   display: flex;
   flex-direction: column;
-  width: 500px;
   padding: 20px;
+  background-color: var(--primary-color-hover);
+  border-radius: 8px;
 }
 .contact-section form input,textarea{
   margin: 10px 0;
@@ -259,6 +357,39 @@ header button:hover{
   border-radius: 10px;
   resize: none;
   outline: none;
+}
+
+/* education and experience section */
+
+.education-section{
+  background-color: var(--primary-light-color);
+  padding: 60px 100px;
+  color: var(--primary-white);
+}
+.education-section h1{
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.experience-area{
+  display: flex;
+  justify-content: space-between;
+}
+.experience{
+  color: var(--primary-grey);
+}
+.experience h3, .education h3{
+  font-size: 30px;
+  color: var(--primary-grey);
+  margin-bottom: 15px;
+}
+
+.education h4{
+  color: var(--primary-grey);
+  margin-bottom: 10px;
+}
+.education-contant{
+  color: var(--primary-white);
 }
 /* footer section */
 footer{
@@ -317,24 +448,20 @@ footer p a:hover{
   .service-card{
     margin: 10px 0;
   }
-  .about-section{
+  .about-area{
     flex-direction: column;
     padding: 40px 30px;
   }
-  .about-section ol{
-    margin-left: 0;
-    margin-top: 40px;
-  }
-  .about-section img{
-    height: auto;
-  }
-  .about-section ol li h1{
+  .about-area h2{
     font-size: 30px;
   }
-  .contact-section form{
+  .contact-area{
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 20px 0;
+  }
+  .experience-area{
+    flex-direction: column;
   }
 }

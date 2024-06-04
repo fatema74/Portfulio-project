@@ -27,7 +27,7 @@ themeInput.addEventListener('change', function () {
 // typing animation 
 document.addEventListener('DOMContentLoaded', function () {
   const options = {
-    Strings: ['DEVELOPER', 'WEB-DESIGNER', 'YOUTUBER'],
+    Strings: ['DEVELOPER', 'WEB-DESIGNER'],
     typeSpeed: 150,
     backSpeed: 50,
     backDelay: 1000,
@@ -66,4 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   type();
 
-  })
+})
+  
+// portfolio section
+
+var tablinks = document.getElementsByClassName('tab-link');
+var tabcontants = document.getElementsByClassName('tab-contant');
+
+function opentab(tabname) {
+  for(tablink of tablinks) {
+    tablink.classList.remove('active-link');
+  }
+  for (tabcontant of tabcontants) {
+    tabcontant.classList.remove('active-tab');
+  }
+  event.currentTarget.classList.add('active-link');
+  document.getElementById(tabname).classList.add('active-tab')
+}
