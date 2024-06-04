@@ -71,6 +71,7 @@ input[type='color']::-webkit-color-swatch{
   color: var(--primary-white);
   border-radius: 10px;
   border: none;
+  /* cursor: pointer; */
 }
 .submit-btn:hover{
   cursor: pointer;
@@ -357,6 +358,11 @@ header button:hover{
   border-radius: 10px;
   resize: none;
   outline: none;
+}
+#msg{
+  color: var(--primary-yellow-hover);
+  margin-top: 20px;
+  display: block;
 }
 
 /* education and experience section */

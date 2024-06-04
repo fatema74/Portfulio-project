@@ -83,3 +83,22 @@ function opentab(tabname) {
   event.currentTarget.classList.add('active-link');
   document.getElementById(tabname).classList.add('active-tab')
 }
+
+// contact form
+const scriptURL =
+  'https://script.google.com/macros/s/AKfycbxdBEncitTpT_bYZ_bXTdu4c9YGFIZfgQVGN2A12znpAcXF24JlbobsW67zl7_K5Prq/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg')
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      msg.innerHTML = 'Message sent successfully'
+      setTimeout(function () {
+        msg.innerHTML=''
+      }, 5000)
+      form.reset()
+    })
+    .catch(error => console.error('Error!', error.message));
+});
