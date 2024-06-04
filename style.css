@@ -136,8 +136,11 @@ header button:hover{
 }
 .hero-img img{
   width: 500px;
+  transition: transform 0.5s;
 }
-
+.hero-img img:hover{
+  transform: translateY(-6px);
+}
 .hero-section{
   display: flex;
   justify-content: space-around;
