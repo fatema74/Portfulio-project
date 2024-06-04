@@ -466,6 +466,15 @@ footer p a:hover{
   .about-area h2{
     font-size: 30px;
   }
+  .tab-titles{
+    flex-direction: column;
+  }
+  .tab-link{
+    margin-bottom: 20px;
+  }
+  .tab-link.active-link::after{
+    width: 50%;
+  }
   .contact-area{
     display: flex;
     flex-direction: column;
@@ -474,5 +483,8 @@ footer p a:hover{
   }
   .experience-area{
     flex-direction: column;
+  }
+  .experience{
+    margin-bottom: 30px;
   }
 }
